@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TrForm</title>
+<link href="TRMS_style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div id = "wrapper">
+	<header><h1>Welcome to TRMS!</h1></header>
+<nav>
+<ul>
+<li><a href="homePage.html">Home</a></li>
+<li><a href="TrForm.html">New Reimbursement Request</a></li>
+<li><a href="checkStatus.html">Check Request Status</a></li>
+<li><a href="finalGrade.html">Submit Final Grade</a></li>
+<li><a href="checkReward.html">Rewards</a></li>
+</ul>
+</nav>
+
+		<main>
+
+	<h2>New Tuition Reimbursement Request</h2>
+	 
+<form method = "post" action = "http://localhost:9090/request" >
+<legend><b> Please fill out the following form:</b></legend><br>
+<label class="label" for= "city">Event Date</label><input  type="date" id ="eventDate" name = "eventDate"/>
+<label class="label" for= "street">Request Date</label><input type ="date" id = "requestDate" name = "requestDate"/>
+<label class="label">Employee ID</label> <input name = "employeeId"/>
+<label class="label" for= "description">Event Description</label><input id="description"  list="etype" name = "description"/>
+
+	  <datalist id="etype">
+      <option>Seminar</option>
+      <option>University</option>
+      <option>Certification Prep</option>
+	  <option>Certification</option>
+	  <option>Technical Training</option>
+	  <option>Other</option>
+      </datalist>
+
+<label class="label">Cost</label> <input  min = "0.00" max = "1000.00" name = "cost"/>
+<!--
+<label class="label" for= "format">Grading Format</label><input name = "gradingFormat" id = "gradingFormat" list = "format"/>
+
+	  <datalist id="format">
+      <option>A-F</option>
+      <option>Pass/Fail</option>
+      <option>Other</option>
+      </datalist>
+-->
+<div id = "end">
+<label class="label">Justification</label> <input name = "justification"/>
+<label class="label">Optional files</label><input type = "file" multiple = "true" id = "finput" onchange = "upload()" name= "fileUpload"/>
+<button type="submit" onclick="requestSubmit()">Submit</button>		
+
+			</div>
+			</form>
+			
+			<p><b>Note:</b> Reimbursement coverage depends the course type.</p>
+
+	
+</main>
+
+<footer>
+<p> &copy; Kelley Tech Services</p>
+</footer>
+		
+</div>
+</body>
+<script src = "getRequests.js" type = "text/javascript"></script>
+</html>

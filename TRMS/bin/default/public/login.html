@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>login</title>
+	<link href="TRMS_style.css" rel="stylesheet" type="text/css">
+	<script type = "text/javascript" src="trms.js"></script>
+</head>
+<body>
+	<div id = "wrapper">
+
+	<header><h1>Welcome to your Tuition Reimbursement Management System!</h1></header>
+<main>
+	
+	<div id = "login">
+	<h2>Please login to get started:</h2>
+	<form action="http://localhost:9090/login" method="POST">
+		<input id = "userid" name="username" placeholder="username" onChange="getID()"/> 
+		<input	type="password" name="password" placeholder="password"/>
+		<button type="submit" >Login</button>
+	</form>
+</div>
+</main>
+		
+<footer>
+<p> &copy; Kelley Tech Services</p>
+</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>finalGrade</title>
+<link href="TRMS_style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div id = "wrapper">
+	<header><h1>Welcome to TRMS!</h1></header>
+		
+<nav>
+<ul>
+<li><a href="homePage.html">Home</a></li>
+<li><a href="TrForm.html">New Reimbursement Request</a></li>
+<li><a href="checkStatus.html">Check Request Status</a></li>
+<li><a href="finalGrade.html">Submit Final Grade</a></li>
+<li><a href="checkReward.html">Rewards</a></li>
+</ul>
+</nav>
+	
+	<main>
+	
+	<h2>Final Grade Submission</h2>
+		
+<form method = "post" action = "http://localhost:9090/finalGrade">
+<legend><b> Please fill out the following form after completion of your course:</b></legend><br>
+<label class="label">Request ID</label> <input  name = "requestId" type = "text"/>
+<label class="label">Minimum passing grade:</label> <input  name = "minimumGrade" type = "text"/>
+<label class="label" for= "format">Grading Format</label><input name = "gradingFormat" id = "gradingFormat" list = "format"/><br>
+
+	  <datalist id="format">
+      <option>A-F</option>
+      <option>Pass/Fail</option>
+      <option>Presentation</option>
+	  <option>Other</option>
+      </datalist>
+
+<label class="label">Grade Achieved</label> <input name = "grade" type = "text"/>
+	<p>If your grade is contingent on a presentation, you must attach the presentation below: </p>
+<label class="label">File Submission</label><input type = "file" multiple = "true" id = "finput" onchange = "upload()" name= "fileUpload">
+<button type="submit" onclick="requestSubmit()">Submit</button>		
+</form>
+		
+</main>
+
+<footer>
+	<p> &copy; Kelley Tech Services</p>
+</footer>
+		
+	</div>
+</body>
+</html>
