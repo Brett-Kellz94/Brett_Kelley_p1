@@ -31,7 +31,7 @@ public class requestDaoPostgres implements requestDao {
 			pstmt.setString(3, request.getEventDate());
 			pstmt.setString(4, request.getDescription());
 			pstmt.setDouble(5, request.getCost());
-			pstmt.setString(7, request.getJustification());
+			pstmt.setString(6, request.getJustification());
 		
 			pstmt.executeUpdate();
 			

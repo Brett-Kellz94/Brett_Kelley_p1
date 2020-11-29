@@ -27,11 +27,10 @@ public class requestController {
 		
 		double cost = Double.parseDouble(ctx.formParam("cost"));
 		
-		String gradingFormat = ctx.formParam("gradingFormat");
 		
 		String justification = ctx.formParam("justification");
 		
-		request newRequest = new request(employeeId, requestDate, eventDate, description, cost, gradingFormat, justification );
+		request newRequest = new request(employeeId, requestDate, eventDate, description, cost, justification );
 		
 		request.createRequest(newRequest);
 		
