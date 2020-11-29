@@ -20,8 +20,8 @@ public class requestDaoPostgres implements requestDao {
 
 	@Override
 	public void createRequest(request request) {                                                                           //attachment
-		String sql = "insert into request (employeeid, request_date, event_date, description, training_cost, grading_format, type_of_event )"
-			    	+ "values(?,date(?),date(?),?,?,?,?)";
+		String sql = "insert into request (employeeid, request_date, event_date, description, training_cost, type_of_event )"
+			    	+ "values(?,date(?),date(?),?,?,?)";
 		
 		try (Connection conn = connUtil.createConnection()) {
 			
@@ -31,7 +31,6 @@ public class requestDaoPostgres implements requestDao {
 			pstmt.setString(3, request.getEventDate());
 			pstmt.setString(4, request.getDescription());
 			pstmt.setDouble(5, request.getCost());
-			pstmt.setString(6, request.getGradingFormat());
 			pstmt.setString(7, request.getJustification());
 		
 			pstmt.executeUpdate();
