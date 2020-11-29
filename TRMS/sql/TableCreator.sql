@@ -39,6 +39,7 @@ attachment bytea,
 supervisor_approval varchar(100),
 department_head_approval varchar(100),
 benco_approval varchar(100),
+final_approval varchar(100),
 constraint pk_requestid primary key (requestid));
 
 drop table final_grade;
