@@ -48,6 +48,7 @@ requestid int not null,
 grading_format varchar (100),
 final_grade varchar (30) not null,
 upload bytea,
+pass_threshold varchar(100),
 constraint pk_grade primary key (gradeid));
 
 drop table award;
