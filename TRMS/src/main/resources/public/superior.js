@@ -55,7 +55,6 @@ let addRow = function (Requests) {
 	let eventDateCol = document.createElement("td");
 	let descriptionCol = document.createElement("td");
 	let costCol = document.createElement("td");
-	let gradingFormatCol = document.createElement("td");
 	let justificationCol = document.createElement("td");
 	//let attachmentCol = document.createElement("td");
 	let supervisorCol = document.createElement("td");
@@ -69,7 +68,6 @@ let addRow = function (Requests) {
 	tableRow.appendChild(eventDateCol);
 	tableRow.appendChild(descriptionCol);
 	tableRow.appendChild(costCol);
-	tableRow.appendChild(gradingFormatCol);
 	tableRow.appendChild(justificationCol);
 	//tableRow.appendChild(attachmentCol);
 	tableRow.appendChild(supervisorCol);
@@ -83,7 +81,6 @@ let addRow = function (Requests) {
 	eventDateCol.innerHTML = Requests.eventDate;
 	descriptionCol.innerHTML = Requests.description;
 	costCol.innerHTML = Requests.cost;
-	gradingFormatCol.innerHTML = Requests.gradingFormat;
 	justificationCol.innerHTML = Requests.justification;
 	//attachmentCol.innerHTML = Requests.attachment;
 	supervisorCol.innerHTML = Requests.supervisorApproval;
@@ -96,7 +93,6 @@ let addRow = function (Requests) {
 	eventDateCol.className = "table-style";
 	descriptionCol.className = "table-style";
 	costCol.className = "table-style";
-	gradingFormatCol.className = "table-style";
 	justificationCol.className = "table-style";
 	//attachmentCol.className = "table-style";
 	supervisorCol.className = "table-style";

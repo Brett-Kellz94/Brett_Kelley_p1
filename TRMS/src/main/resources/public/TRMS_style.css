@@ -10,7 +10,7 @@
 	
 	margin-left: 30px; margin-right: auto; width: 60%; margin-bottom: 1em; border-collapse: collapse;
 }
-td, th {padding: 0.75em; }
+td, th {padding: 1em; }
 tr:nth-of-type(even) { background-color: #C0C5D2;}
 /*caption {margin:5em; font-weight: bold; font-size: 120%}*/
 
