@@ -95,7 +95,6 @@ public class requestDaoPostgres implements requestDao {
 	    		+ " event_date,"
 	    		+ " description,"
 	    		+ " training_cost,"
-	    		+ " grading_format,"
 	    		+ " type_of_event,"
 	    		+ " supervisor_approval,"
 	    		+ " department_head_approval,"
@@ -125,7 +124,6 @@ public class requestDaoPostgres implements requestDao {
 			request.setEventDate(rs.getString("event_date"));
 			request.setDescription(rs.getString("description"));
 			request.setCost(rs.getDouble("training_cost"));
-			request.setGradingFormat(rs.getString("grading_format"));
 			request.setJustification(rs.getString("type_of_event"));
 			request.setSupervisorApproval(rs.getString("supervisor_approval"));
 			request.setDepartmentHeadApproval(rs.getString("department_head_approval"));
@@ -222,7 +220,6 @@ String sql2 = "update request set supervisor_approval = benco_approval, departme
 	    		+ " a.event_date,"
 	    		+ " a.description,"
 	    		+ " a.training_cost,"
-	    		+ " a.grading_format,"
 	    		+ " a.type_of_event,"
 	    		+ " a.supervisor_approval,"
 	    		+ " a.department_head_approval,"
@@ -269,7 +266,6 @@ String sql2 = "update request set supervisor_approval = benco_approval, departme
 			request.setEventDate(rs.getString("event_date"));
 			request.setDescription(rs.getString("description"));
 			request.setCost(rs.getDouble("training_cost"));
-			request.setGradingFormat(rs.getString("grading_format"));
 			request.setJustification(rs.getString("type_of_event"));
 			request.setSupervisorApproval(rs.getString("supervisor_approval"));
 			request.setDepartmentHeadApproval(rs.getString("department_head_approval"));
