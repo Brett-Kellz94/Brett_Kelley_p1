@@ -10,14 +10,10 @@
 	
 	margin-left: 30px; margin-right: auto; width: 60%; margin-bottom: 1em; border-collapse: collapse;
 }
-td, th {padding: 0.5em; }
+td, th {padding: 2em; }
 tr:nth-of-type(even) { background-color: #C0C5D2;}
-caption {margin:5em; font-weight: bold; font-size: 120%}
-/*
-.label{ display: block; height: 25px; line-height: 35px; width:50%}
-.floatleft{ padding-right: 50px; float:left; margin-bottom: 0;}
-.clear{ clear:both;}
-*/
+/*caption {margin:5em; font-weight: bold; font-size: 120%}*/
+
 
 #logout {float:right; padding-right: 30px; }
 div a {text-decoration: none;}
@@ -52,6 +48,7 @@ label {float:left; display:block; text-align: right; width: 10em; padding-right:
 input {display: block; margin-bottom: 2em; }
 textarea {display: block; margin-bottom: 2em;}
 input[type="submit"] {margin-left:2em;}
-form {padding:3em; margin-left: 250px;}
+form {padding:3em; margin-left: 300px;}
+.adjustButton {margin-left:175px;}
 
 .clear {clear:both; padding-left:2em;}
