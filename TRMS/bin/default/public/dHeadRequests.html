@@ -27,7 +27,6 @@
 			<th class="table-style">Event Date</th>
 			<th class="table-style">Description</th>
 			<th class="table-style">Cost</th>
-			<th class="table-style">Grading Format</th>
 			<th class="table-style">Work Justification</th>
 			<th class="table-style">Supervisor Approval</th>
 			<th class="table-style">Department Head Approval</th>
@@ -44,7 +43,9 @@
 	    <option value="Approved" >Approve</option>
 	    <option value="Denied" >Deny</option>
 		<option value="Please provide more information" >Request Additional Info</option>
-	  </select>
+	  </select><br><br>
+		<textarea placeholder = "Reason for denial (if applicable):" type = "text" name = "denial" rows="5" cols = "50"></textarea>
+		<textarea placeholder = "More information requested:" type = "text" name = "info" rows="5" cols = "50"></textarea>
 		<button type="submit">Submit</button>
 	</form>
 		<script src = "superior.js" type = "text/javascript"></script>

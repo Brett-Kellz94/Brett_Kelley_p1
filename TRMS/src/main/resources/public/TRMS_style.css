@@ -1,14 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
 .table-style {
-/*
     border-style: solid;
+/*
     border-collapse: collapse;
     border-width: 5px;
     margin: 5px;
 */
 	
-	margin-left: 30px; margin-right: auto; width: 60%; margin-bottom: 1em; border-collapse: collapse;
+	margin-left: 30px; margin-right: auto; width: 40%; margin-bottom: 1em; border-collapse: collapse;
 }
 td, th {padding: 0.5em; }
 tr:nth-of-type(even) { background-color: #C0C5D2;}
