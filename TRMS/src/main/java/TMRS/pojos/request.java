@@ -16,14 +16,13 @@ public class request {
 	
 	
 	public request(int employeeId, String requestDate, String eventDate, String description, double cost,
-			String gradingFormat, String justification) {
+			 String justification) {
 		super();
 		this.employeeId = employeeId;
 		this.requestDate = requestDate;
 		this.eventDate = eventDate;
 		this.description = description;
 		this.cost = cost;
-		this.gradingFormat = gradingFormat;
 		this.justification = justification;
 		
 	}
