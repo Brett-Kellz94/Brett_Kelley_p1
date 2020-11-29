@@ -8,7 +8,7 @@ function getTable() {
     //AJAX - Asynchronous JavaScript and XML
     //Initialize xhr object
     let xhr = new XMLHttpRequest();
-    const url = "http://localhost:9090/request?employeeId="+sessionStorage.getItem("userId");
+    const url = "http://40.114.32.134/request?employeeId="+sessionStorage.getItem("userId");
 
     //sets up ready state handler
     xhr.onreadystatechange = function () {
@@ -120,7 +120,7 @@ function getReward() {
     //AJAX - Asynchronous JavaScript and XML
     //Initialize xhr object
     let xhr = new XMLHttpRequest();
-    const url = "http://localhost:9090/reward?employeeId="+sessionStorage.getItem("userId");
+    const url = "http://40.114.32.134/reward?employeeId="+sessionStorage.getItem("userId");
 
     //sets up ready state handler
     xhr.onreadystatechange = function () {

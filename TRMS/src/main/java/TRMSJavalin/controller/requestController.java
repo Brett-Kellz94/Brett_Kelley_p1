@@ -35,7 +35,7 @@ public class requestController {
 		
 		request.createRequest(newRequest);
 		
-		ctx.redirect("checkStatus.html");
+		ctx.redirect("http://40.114.32.134/checkStatus.html");
 
 		
 	}
