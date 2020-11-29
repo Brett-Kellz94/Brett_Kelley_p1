@@ -116,4 +116,78 @@ let addRow = function (myRequest) {
 //	
 //}
 
+function getReward() {
+    //AJAX - Asynchronous JavaScript and XML
+    //Initialize xhr object
+    let xhr = new XMLHttpRequest();
+    const url = "http://localhost:9090/reward?employeeId="+sessionStorage.getItem("userId");
+
+    //sets up ready state handler
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        switch (xhr.readyState) {
+		
+		
+            case 0:
+                console.log("nothing, initalized not sent");
+                break;
+            case 1:
+                console.log("connection established")
+                break;
+            case 2:
+                console.log("request sent");
+                break;
+            case 3:
+                console.log("waiting response");
+                break;
+            case 4:
+                console.log("finished");
+                //logic to add request to table
+                if (xhr.status === 200) {
+                    console.log(xhr.responseText);
+                    let rewardList = JSON.parse(xhr.responseText);
+                    console.log(rewardList);
+                    console.log(rewardList[0]);
+                    rewardList.forEach(element => {
+                        addRewardRow(element);
+                    });
+                }
+                break;
+		
+		}
+	}
+	//opens up the request
+    xhr.open("GET", url, true);
+    //sends request
+    xhr.send();
+
+	
+}
+
+let addRewardRow = function (myReward) {
+    let table = document.getElementById("reward-table");
+    let tableRow = document.createElement("tr");
+    let idCol = document.createElement("td");
+    let descriptionCol = document.createElement("td");
+    let awardAmountCol = document.createElement("td");
+//	let uploadCol = document.createElement("td");
+
+    tableRow.appendChild(idCol);
+    tableRow.appendChild(descriptionCol);
+    tableRow.appendChild(awardAmountCol);
+//	tableRow.appendChild(uploadCol);
+    table.appendChild(tableRow);
+
+    idCol.innerHTML = myReward.requestId;
+    descriptionCol.innerHTML = myReward.courseDescription;
+    awardAmountCol.innerHTML = myReward.rewardAmount;
+//	uploadCol.innerHTML = myRequest.fileUpload;
+
+
+    idCol.className = "table-style";
+    descriptionCol.className = "table-style";
+    awardAmountCol.className = "table-style";
+//	uploadCol.className = "table-style";
+    tableRow.className = "table-style";
+}
 

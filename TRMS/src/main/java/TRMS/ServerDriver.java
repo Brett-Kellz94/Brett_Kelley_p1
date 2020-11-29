@@ -7,6 +7,7 @@ import TRMSJavalin.controller.finalGradeController;
 import TRMSJavalin.controller.getAllRequestsController;
 import TRMSJavalin.controller.requestController;
 import TRMSJavalin.controller.supApprovalController;
+import TRMSJavalin.controller.awardController;
 
 public class ServerDriver {
 
@@ -17,6 +18,7 @@ public class ServerDriver {
 	public static dhApprovalController dhController = new dhApprovalController();
 	public static benCoApprovalController bencoController = new benCoApprovalController();
 	public static finalGradeController gradeController = new finalGradeController();
+	public static awardController awardController = new awardController();
 	
 	
 	private static  String LOGIN_PATH = "/login";
@@ -26,6 +28,7 @@ public class ServerDriver {
 	private static  String DHAPPROVAL_PATH = "/dhApproval";
 	private static  String BENCOAPPROVAL_PATH = "/bencoApproval";
 	private static  String GRADE_PATH = "/finalGrade";
+	private static  String AWARD_PATH = "/reward";
 	
 	
 public static void main(String[] args) {
@@ -40,5 +43,7 @@ public static void main(String[] args) {
 		app.post(BENCOAPPROVAL_PATH, ctx -> bencoController.bencoApproval(ctx));
 		app.post(GRADE_PATH, ctx -> gradeController.makeFinalGrade(ctx));
 		app.get(GRADE_PATH, ctx -> gradeController.getGrades(ctx));
+		app.post(AWARD_PATH, ctx -> awardController.sendReward(ctx));
+		app.get(AWARD_PATH, ctx -> awardController.getReward(ctx));
 	}
 }

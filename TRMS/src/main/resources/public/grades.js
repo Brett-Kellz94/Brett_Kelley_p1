@@ -59,6 +59,7 @@ let addRow = function (Grades) {
     tableRow.appendChild(finalGradeCol);
 	//tableRow.appendChild(uploadCol);
 	tableRow.appendChild(passCol);
+	table.appendChild(tableRow);
 
 
     requestIdCol.innerHTML = Grades.requestId;
@@ -72,5 +73,6 @@ let addRow = function (Grades) {
     finalGradeCol.className = "table-style";
 	//uploadCol.className = "table-style";
 	passCol.className = "table-style";
+	tableRow.className = "table-style";
 
 }

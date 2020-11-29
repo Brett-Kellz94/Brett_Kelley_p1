@@ -19,7 +19,7 @@ requestService getRequest = new requestServiceFullstack();
 		
 		getRequest.dhApproval(requestId, newRequest);
 		
-		ctx.redirect("/DHeadHomePage.html");
+		ctx.redirect("/dHeadRequests.html");
 		
 		
 		

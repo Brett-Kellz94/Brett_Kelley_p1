@@ -19,7 +19,8 @@ caption {margin:5em; font-weight: bold; font-size: 120%}
 .clear{ clear:both;}
 */
 
-
+#logout {float:right; padding-right: 30px; }
+div a {text-decoration: none;}
 
 h1 {padding:2em; color: #FFFFFF; background-color: #144cd7;  padding-top: 50px; padding-left: 2em;}
 
@@ -38,13 +39,13 @@ nav a:hover{color:#f45d0a; border: 3px inset #333333; background-color: #b6d2d3;
           margin-left: auto; margin-right: auto;
           min-width:550px; max-width: 1280px; }
 
-body {background-color: #04184B; color: #04184B}
+body {background-color: #04184B; color: #04184B; min-height: 900px;}
 body {font-family: Arial;}
 header{ display: block; }
 main{ display: block; } nav{ display: block; } footer{ display: block; } figure{ display: block; } figcaption{ display: block; } aside{ display: block; } section{ display: block; } article { display: block; }
 
 
-footer{ font-size: small; font-style: italic; text-align: center; background-color: #9BC1C2; padding: 1em; margin-top: 200px;}
+footer{ font-size: small; font-style: italic; text-align: center; background-color: #9BC1C2; padding: 1em; margin-top: 400px;}
 #login {margin-left: 40px;}
 
 label {float:left; display:block; text-align: right; width: 10em; padding-right:1em;}

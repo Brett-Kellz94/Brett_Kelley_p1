@@ -42,9 +42,6 @@ public class requestController {
 	
 	public void getEmplRequests(Context ctx) {
 		
-		System.out.println();
-		
-		System.out.println(ctx.queryParam("employeeId"));
 		
 		int employeeId= Integer.parseInt(ctx.queryParam("employeeId"));
 		

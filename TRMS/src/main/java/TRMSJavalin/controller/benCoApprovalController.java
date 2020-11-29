@@ -19,7 +19,7 @@ requestService getRequest = new requestServiceFullstack();
 		
 		getRequest.bencoApproval(requestId, newRequest);
 		
-		ctx.redirect("/BenCoHomePage.html");
+		ctx.redirect("/BenCoRequests.html");
 		
 	
 		

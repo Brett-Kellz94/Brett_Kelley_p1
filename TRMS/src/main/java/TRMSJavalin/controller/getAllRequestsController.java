@@ -13,8 +13,9 @@ public class getAllRequestsController {
 
 	public void getAllRequests(Context ctx) {
 
+		int employeeId= Integer.parseInt(ctx.queryParam("employeeId"));
 		
-		List<request> requests = request.getAllRequests();
+		List<request> requests = request.getAllRequests(employeeId);
 		
 		 ctx.json(requests);
 		

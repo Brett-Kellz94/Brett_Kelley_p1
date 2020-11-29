@@ -46,7 +46,14 @@ public class finalGradePostgres implements finalGradeDao {
 		
 		try (Connection conn = connUtil.createConnection()) {
 			
-			String sql = "select requestid, grading_format, final_grade, pass_threshold from final_grade";
+			String sql = "select a.requestid,"
+					+ " a.grading_format,"
+					+ " a.final_grade,"
+					+ " a.pass_threshold"
+					+ " from final_grade a"
+					+ " left join request b"
+					+ " on a.requestid = b.requestid"
+					+ " where b.final_approval is null";
 			
 			
 			PreparedStatement pstmt = conn.prepareStatement(sql);

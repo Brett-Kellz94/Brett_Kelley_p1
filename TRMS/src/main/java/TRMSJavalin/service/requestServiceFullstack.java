@@ -44,4 +44,9 @@ public class requestServiceFullstack implements requestService{
 		
 	}
 
+	@Override
+	public List<request> getAllRequests(int employeeId) {
+		return reqDao.getAllRequests(employeeId);
+	}
+
 }

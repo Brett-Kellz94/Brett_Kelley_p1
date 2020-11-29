@@ -8,6 +8,6 @@ public interface rewardService {
 	
 	public void makeReward(reward reward);
 
-	public List<reward> getReward();
+	public List<reward> getReward(int employeeId);
 
 }

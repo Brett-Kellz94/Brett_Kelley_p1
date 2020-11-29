@@ -20,7 +20,7 @@ public class supApprovalController {
 		
 		getRequest.supApproval(requestId, newRequest);
 		
-		ctx.redirect("/supervisorHomePage.html");
+		ctx.redirect("/supervisorRequests.html");
 
 		
 

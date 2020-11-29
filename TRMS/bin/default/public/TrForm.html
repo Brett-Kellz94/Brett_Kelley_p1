@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div id = "wrapper">
-	<header><h1>Welcome to TRMS!</h1></header>
+	<header><h1>Welcome to TRMS!</h1><div id="logout"><b><a href="login.html">logout</a></b></div></header>
 <nav>
 <ul>
 <li><a href="homePage.html">Home</a></li>
@@ -39,15 +39,7 @@
       </datalist>
 
 <label class="label">Cost</label> <input  min = "0.00" max = "1000.00" name = "cost"/>
-<!--
-<label class="label" for= "format">Grading Format</label><input name = "gradingFormat" id = "gradingFormat" list = "format"/>
 
-	  <datalist id="format">
-      <option>A-F</option>
-      <option>Pass/Fail</option>
-      <option>Other</option>
-      </datalist>
--->
 <div id = "end">
 <label class="label">Justification</label> <input name = "justification"/>
 <label class="label">Optional files</label><input type = "file" multiple = "true" id = "finput" onchange = "upload()" name= "fileUpload"/>

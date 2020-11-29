@@ -10,6 +10,8 @@ public interface requestDao {
 	
 	public List<request> getAllRequests();
 	
+	public List<request> getAllRequests(int employeeId);
+	
 	public List<request> getEmplRequests(int employeeId);
 	
 	public request supApproval(int requestId, request request);
