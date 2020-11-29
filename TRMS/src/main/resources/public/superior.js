@@ -4,7 +4,7 @@ window.onload = function () {
     //AJAX - Asynchronous JavaScript and XML
     //Initialize xhr object
     let xhr = new XMLHttpRequest();
-    const url = "http://localhost:9090/allRequests?employeeId="+sessionStorage.getItem("userId");
+    const url = "http://40.114.32.134/allRequests?employeeId="+sessionStorage.getItem("userId");
     //sets up ready state handler
     xhr.onreadystatechange = function () {
         console.log(xhr.readyState);

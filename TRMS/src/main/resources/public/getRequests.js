@@ -3,7 +3,7 @@ function getTable() {
     //AJAX - Asynchronous JavaScript and XML
     //Initialize xhr object
     let xhr = new XMLHttpRequest();
-    const url = "http://localhost:9090/request?employeeId="+document.getElementById("employeeId").value;
+    const url = "http://40.114.32.134/request?employeeId="+document.getElementById("employeeId").value;
 
     //sets up ready state handler
     xhr.onreadystatechange = function () {
