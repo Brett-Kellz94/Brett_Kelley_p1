@@ -1,7 +1,12 @@
 function getID() {
-sessionStorage.setItem("userId",document.getElementById("userid").value);
+var user = sessionStorage.setItem("userId",document.getElementById("userid").value);
 }
 
+function employeeID() {	
+//let grabDiv = document.getElementById("employee");
+	
+sessionStorage.getItem("userId");
+}
 
 
 function getTable() {

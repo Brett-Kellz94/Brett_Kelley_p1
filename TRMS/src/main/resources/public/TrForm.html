@@ -26,16 +26,16 @@
 <legend><b> Please fill out the following form:</b></legend><br>
 <label class="label" for= "city">Event Date</label><input  type="date" id ="eventDate" name = "eventDate"/>
 <label class="label" for= "street">Request Date</label><input type ="date" id = "requestDate" name = "requestDate"/>
-<label class="label">Employee ID</label> <input name = "employeeId"/>
+<label class="label" id = "name"></label> <input name = "employeeId"/>
 <label class="label" for= "description">Event Description</label><input id="description"  list="etype" name = "description"/>
 
 	  <datalist id="etype">
-      <option>Seminar</option>
-      <option>University</option>
-      <option>Certification Prep</option>
-	  <option>Certification</option>
-	  <option>Technical Training</option>
-	  <option>Other</option>
+      <option>Seminar (60% reimburement)</option>
+      <option>University Course(80% reimburement)</option>
+      <option>Certification Prep (75% reimburement)</option>
+	  <option>Certification(100% reimburement)</option>
+	  <option>Technical Training (90% reimburement)</option>
+	  <option>Other (30% reimburement)</option>
       </datalist>
 
 <label class="label">Cost</label> <input  min = "0.00" max = "1000.00" name = "cost"/>
