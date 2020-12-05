@@ -1,4 +1,13 @@
-   //window.onload = 
+
+
+function employeeID() {	
+let grabDiv = document.getElementById("employee");
+	
+grabDiv.value = sessionStorage.getItem("userId");
+}
+
+
+//window.onload = 
 function getTable() {
     //AJAX - Asynchronous JavaScript and XML
     //Initialize xhr object
