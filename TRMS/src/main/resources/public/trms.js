@@ -3,9 +3,9 @@ var user = sessionStorage.setItem("userId",document.getElementById("userid").val
 }
 
 function employeeID() {	
-//let grabDiv = document.getElementById("employee");
+let grabDiv = document.getElementById("employee");
 	
-sessionStorage.getItem("userId");
+grabDiv.value = sessionStorage.getItem("userId");
 }
 
 

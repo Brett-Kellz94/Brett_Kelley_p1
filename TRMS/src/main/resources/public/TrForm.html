@@ -5,7 +5,7 @@
 <title>TrForm</title>
 <link href="TRMS_style.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body onload = "employeeID()">
 	<div id = "wrapper">
 	<header><h1>Welcome to TRMS!</h1><div id="logout"><b><a href="login.html">logout</a></b></div></header>
 <nav>
@@ -27,7 +27,7 @@
 <label class="label" for= "city">Event Date</label><input  type="date" id ="eventDate" name = "eventDate"/>
 <label class="label" for= "street">Request Date</label><input type ="date" id = "requestDate" name = "requestDate"/>
 <!--<label class="label">Employee ID</label> <input name = "employeeId"/>-->
-	<div id ="employee" name = "employeeId" value="employeeID()"></div>
+<div id ="employee" name = "employeeId" ></div>
 <label class="label" for= "description">Event Description</label><input id="description"  list="etype" name = "description"/>
 
 	  <datalist id="etype">
