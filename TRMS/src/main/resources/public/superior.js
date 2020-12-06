@@ -107,7 +107,7 @@ let addOpt = function(Requests){
 //	let requestID = document.createElement();
 //	requestIdOption
 //	dropDown.append(document.getElementById("option").setAttribute("value",Requests.requestID).text(Requests.requestID));
-	dropDown.append("<option value="+Requests.requestId+">"+Requests.requestId+"</option>" ;
+	dropDown.append("<option value="+Requests.requestId+">"+Requests.requestId+"</option>");
 }
 
 
