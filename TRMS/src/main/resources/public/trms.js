@@ -3,6 +3,15 @@ var user = sessionStorage.setItem("userId",document.getElementById("userid").val
 }
 
 
+
+function employeeID() {	
+let grabDiv = document.getElementById("employee");
+	
+grabDiv.value = sessionStorage.getItem("userId");
+}
+
+
+
 function getTable() {
     //AJAX - Asynchronous JavaScript and XML
     //Initialize xhr object
