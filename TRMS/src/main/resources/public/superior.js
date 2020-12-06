@@ -103,11 +103,14 @@ let addRow = function (Requests) {
 }
 let addOpt = function(Requests){
 	let dropDown = document.getElementById("requestId");
-	let Option = document.createElement("option");
+	let option = document.createElement("option");
 //	let requestID = document.createElement();
 //	requestIdOption
 //	dropDown.append(document.getElementById("option").setAttribute("value",Requests.requestID).text(Requests.requestID));
-	Option.append("<option value="+Requests.requestId+">"+Requests.requestId+"</option>");
+//	dropDown.append("<option value="+Requests.requestId+">"+Requests.requestId+"</option>");
+	dropDown.appendChild(option);
+	let option.innerHTML = Requests.requestId;
+	let option.value = Requests.requestId;
 }
 
 
