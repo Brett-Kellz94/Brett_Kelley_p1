@@ -1,5 +1,6 @@
 package TRMS;
 import io.javalin.Javalin;
+import TRMSJavalin.controller.approvedController;
 import TRMSJavalin.controller.authController;
 import TRMSJavalin.controller.benCoApprovalController;
 import TRMSJavalin.controller.dhApprovalController;
@@ -13,6 +14,7 @@ public class ServerDriver {
 
 	private static authController authController = new authController();
 	public static requestController reqController = new requestController();
+	public static approvedController appController = new approvedController();
 	public static getAllRequestsController allReqController = new getAllRequestsController();
 	public static supApprovalController supController = new supApprovalController();
 	public static dhApprovalController dhController = new dhApprovalController();
@@ -23,6 +25,7 @@ public class ServerDriver {
 	
 	private static  String LOGIN_PATH = "/login";
 	private static  String REQUEST_PATH = "/request";
+	private static  String APPROVED_PATH = "/approvedRequests";
 	private static  String ALL_REQUEST_PATH = "/allRequests";
 	private static  String SAPPROVAL_PATH = "/supApproval";
 	private static  String DHAPPROVAL_PATH = "/dhApproval";
@@ -37,6 +40,7 @@ public static void main(String[] args) {
 		//app.get(LOGIN_PATH, ctx -> authController.checkUser(ctx));
 		app.post(REQUEST_PATH, ctx -> reqController.createRequest(ctx));
 		app.get(REQUEST_PATH, ctx -> reqController.getEmplRequests(ctx));
+		app.get(APPROVED_PATH,  ctx -> appController.getApprovedRequests(ctx));
 		app.get(ALL_REQUEST_PATH, ctx -> allReqController.getAllRequests(ctx));
 		app.post(SAPPROVAL_PATH, ctx -> supController.supApproval(ctx));
 		app.post(DHAPPROVAL_PATH, ctx -> dhController.dhApproval(ctx));

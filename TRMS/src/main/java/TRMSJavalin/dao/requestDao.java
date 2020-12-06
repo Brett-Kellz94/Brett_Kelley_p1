@@ -14,6 +14,8 @@ public interface requestDao {
 	
 	public List<request> getEmplRequests(int employeeId);
 	
+	public List<request> getApprovedRequests(int employeeId);
+	
 	public request supApproval(int requestId, request request);
 	
 	public request dhApproval(int requestId, request request);

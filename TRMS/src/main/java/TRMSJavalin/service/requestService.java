@@ -10,6 +10,8 @@ public interface requestService {
 public void createRequest(request request);
 
 public List<request> getEmplRequests(int employeeId);
+
+public List<request> getApprovedRequests(int employeeId);
 	
 public List<request> getAllRequests();
 

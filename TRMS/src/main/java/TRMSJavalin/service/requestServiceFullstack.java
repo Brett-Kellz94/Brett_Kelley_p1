@@ -49,4 +49,10 @@ public class requestServiceFullstack implements requestService{
 		return reqDao.getAllRequests(employeeId);
 	}
 
+	@Override
+	public List<request> getApprovedRequests(int employeeId) {
+		// TODO Auto-generated method stub
+		return reqDao.getApprovedRequests(employeeId);
+	}
+
 }

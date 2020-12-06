@@ -83,6 +83,50 @@ public class requestDaoPostgres implements requestDao {
 		
 		return getRequest;
 	}
+	
+	
+	@Override
+	public List<request> getApprovedRequests(int employeeId) {
+		List<request> getRequest = new ArrayList<>();
+		
+		
+		try (Connection conn = connUtil.createConnection()) {
+			
+		String sql = "select requestid, request_date, training_cost, supervisor_approval, department_head_approval, benco_approval from request where employeeid = ? and benco_approval = 'Approved' and final_approval is null";
+		
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setInt(1, employeeId);
+		
+		ResultSet rs = pstmt.executeQuery();
+		
+		
+		while (rs.next()) {
+			
+			request request = new request();
+			
+			request.setRequestId(rs.getInt("requestid"));
+			request.setRequestDate(rs.getString("request_date"));
+			request.setCost(rs.getDouble("training_cost"));
+			request.setSupervisorApproval(rs.getString("supervisor_approval"));
+			request.setDepartmentHeadApproval(rs.getString("department_head_approval"));
+			request.setBenCoApproval(rs.getString("benco_approval"));
+			
+			getRequest.add(request);
+
+		}
+		
+		
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+		return getRequest;
+	}
+	
+
+	
+	
 
 	@Override
 	public List<request> getAllRequests() {
@@ -283,7 +327,8 @@ String sql2 = "update request set supervisor_approval = benco_approval, departme
 		
 		return getRequest;
 	}
-	
+
+
 	
 	
 	
