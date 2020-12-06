@@ -1,5 +1,15 @@
 function getID() {
-sessionStorage.setItem("userId",document.getElementById("userid").value);
+var user = sessionStorage.setItem("userId",document.getElementById("userid").value);
+}
+
+
+
+function employeeID() {	
+
+	
+document.getElementById("employee").value = sessionStorage.getItem("userId");
+
+
 }
 
 
