@@ -5,9 +5,11 @@ var user = sessionStorage.setItem("userId",document.getElementById("userid").val
 
 
 function employeeID() {	
-let grabDiv = document.getElementById("employee");
+//let grabDiv = document.getElementById("employee");
 	
-grabDiv.value = sessionStorage.getItem("userId");
+document.getElementById("employee").value = sessionStorage.getItem("userId");
+
+
 }
 
 
