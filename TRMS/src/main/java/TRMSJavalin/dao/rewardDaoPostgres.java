@@ -25,6 +25,7 @@ public class rewardDaoPostgres implements rewardDao{
 				+ " employeeid,"
 				+ " case when description = 'University' then training_cost * .8 "
 				+ " when description = 'Seminar' then training_cost * .6"
+				+ " when description = 'Certification' then training_cost * 1"
 				+ " when description = 'Certification Prep' then training_cost * .75"
 				+ " when description = 'Technical Training' then training_cost *.9"
 				+ " when description = 'Other' then training_cost * .3 end as award_amount"
