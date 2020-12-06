@@ -104,10 +104,6 @@ let addRow = function (Requests) {
 let addOpt = function(Requests){
 	let dropDown = document.getElementById("requestId");
 	let option = document.createElement("option");
-//	let requestID = document.createElement();
-//	requestIdOption
-//	dropDown.append(document.getElementById("option").setAttribute("value",Requests.requestID).text(Requests.requestID));
-//	dropDown.append("<option value="+Requests.requestId+">"+Requests.requestId+"</option>");
 	dropDown.appendChild(option);
     option.innerHTML = Requests.requestId;
 	option.value = Requests.requestId;
