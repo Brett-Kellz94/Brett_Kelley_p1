@@ -32,6 +32,7 @@ window.onload = function () {
                     console.log(requestList[0]);
                     requestList.forEach(element => {
                         addRow(element);
+						addOpt(element);
                     });
                 }
                 break;
@@ -100,3 +101,15 @@ let addRow = function (Requests) {
 	bencoCol.className = "table-style";
     tableRow.className = "table-style";
 }
+let addOpt = function(Requests){
+	let dropDown = document.getElementById("requestId");
+//	let Option = document.createElement("option");
+//	let requestID = document.createElement();
+//	requestIdOption
+	dropDown.append(document.getElementById('<option/>').attr("value",Requests.requestID).text(Requests.requestID));
+}
+
+
+
+
+
