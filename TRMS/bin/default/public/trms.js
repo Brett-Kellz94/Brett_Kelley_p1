@@ -232,8 +232,8 @@ function getApproval() {
                     console.log(requestList);
                     console.log(requestList[0]);
                     requestList.forEach(element => {
-                        addRow(element);
-						addOpt(element);
+                        addAcceptedRow(element);
+						addNewOpt(element);
                     });
                 }
                 break;
@@ -250,7 +250,7 @@ function getApproval() {
 	
 }
 
-let addRow = function (myRequest) {
+let addAcceptedRow = function (myRequest) {
     let table = document.getElementById("request-table");
     let tableRow = document.createElement("tr");
     let idCol = document.createElement("td");
@@ -284,7 +284,7 @@ let addRow = function (myRequest) {
     tableRow.className = "table-style";
 }
 
-let addOpt = function(Requests){
+let addNewOpt = function(Requests){
 	let dropDown = document.getElementById("requestId");
 	let option = document.createElement("option");
 	dropDown.appendChild(option);

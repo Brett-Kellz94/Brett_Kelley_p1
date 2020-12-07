@@ -31,6 +31,7 @@ window.onload = function () {
                     console.log(gradesList[0]);
                     gradesList.forEach(element => {
                         addRow(element);
+						addOpt(element);
                     });
                 }
                 break;
@@ -75,4 +76,12 @@ let addRow = function (Grades) {
 	passCol.className = "table-style";
 	tableRow.className = "table-style";
 
+}
+
+let addOpt = function(Requests){
+	let dropDown = document.getElementById("requestId");
+	let option = document.createElement("option");
+	dropDown.appendChild(option);
+    option.innerHTML = Requests.requestId;
+	option.value = Requests.requestId;
 }
