@@ -19,7 +19,8 @@ public class requestDaoPostgres implements requestDao {
 	}
 
 	@Override
-	public void createRequest(request request) {                                                                           //attachment
+	public void createRequest(request request) { 
+		//attachment
 		String sql = "insert into request (employeeid, request_date, event_date, description, training_cost, type_of_event )"
 			    	+ "values(?,date(?),date(?),?,?,?)";
 		
@@ -151,9 +152,6 @@ public class requestDaoPostgres implements requestDao {
 		
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		
-		
-		//pstmt.setInt(1, employeeId);
-		
 		ResultSet rs = pstmt.executeQuery();
 		
 		
@@ -209,6 +207,7 @@ public class requestDaoPostgres implements requestDao {
 
 	@Override
 	public request dhApproval(int requestId, request request) {
+		
     String sql = "update request set department_head_approval = ? where requestid = ?";
     String sql2 = "update request set supervisor_approval = department_head_approval where requestid = ?";
 		
@@ -232,8 +231,9 @@ public class requestDaoPostgres implements requestDao {
 
 	@Override
 	public request bencoApproval(int requestId, request request) {
-String sql = "update request set benco_approval = ? where requestid = ?";
-String sql2 = "update request set supervisor_approval = benco_approval, department_head_approval = benco_approval where requestid = ?";
+		
+    String sql = "update request set benco_approval = ? where requestid = ?";
+    String sql2 = "update request set supervisor_approval = benco_approval, department_head_approval = benco_approval where requestid = ?";
 		
 		try (Connection conn = connUtil.createConnection()) {
 			

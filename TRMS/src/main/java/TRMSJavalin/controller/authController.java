@@ -7,9 +7,12 @@ import TRMSJavalin.dao.loginDaoPostgres;
 import TRMSJavalin.service.AuthService;
 import TRMSJavalin.service.AuthServiceImpl;
 import io.javalin.http.Context;
+import java.util.logging.Logger;
 
 public class authController {
 	private AuthService auth = new AuthServiceImpl();
+	
+	private static Logger log = Logger.getAnonymousLogger();
 	
 	public void login(Context ctx) {
 		int username = Integer.parseInt(ctx.formParam("username"));
@@ -27,21 +30,24 @@ public class authController {
 			
 			if (emplType.equals("1")) {
 				ctx.redirect("homePage.html");
-				//ctx.html("you've logged in!");
+				log.info("normal employee has logged in");
 			}
 			    
 			//ctx.status(200);
 			if (emplType.equals("2")) {
 				ctx.redirect("supervisorHomePage.html");
+				log.info("Supervisor has logged in");
 			}
 			
 			
 			if(emplType.equals("3")) {
 				ctx.redirect("DHeadHomePage.html");
+				log.info("Department head has logged in");
 			}
 			
             if(emplType.equals("4")) {
             	ctx.redirect("BenCoHomePage.html");
+            	log.info("Benefits coordinator has logged in");
 			}
 			
 			

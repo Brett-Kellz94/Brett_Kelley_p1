@@ -7,9 +7,11 @@ import io.javalin.http.Context;
 import java.util.List;
 
 import TMRS.pojos.reward;
+import java.util.logging.Logger;
 
 public class awardController {
 	
+	private static Logger log = Logger.getAnonymousLogger();
 	
 	rewardService reward = new rewardFullstack();
 	
@@ -24,6 +26,8 @@ public class awardController {
 		reward.makeReward(newReward);
 		
 		ctx.redirect("finalGradeForApproval.html");
+		
+		log.info("Reward has been sent to employee");
 
 	}
 	
@@ -35,6 +39,8 @@ public class awardController {
 		List<reward> rewards = reward.getReward(employeeId);
 		
 		ctx.json(rewards);
+		
+		log.info("Reward has been retrieved");
 	}
 	
 

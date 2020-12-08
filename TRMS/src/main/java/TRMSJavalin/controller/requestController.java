@@ -9,13 +9,19 @@ import java.util.List;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+import java.util.logging.Logger;
+
 import TMRS.pojos.request;
 
 public class requestController {
+	
+	private static Logger log = Logger.getAnonymousLogger();
 
 	requestService request = new requestServiceFullstack();
 	
+	
 	public void createRequest(Context ctx) {
+		
 		
 		int employeeId = Integer.parseInt(ctx.formParam("employeeId"));
 	
@@ -27,7 +33,6 @@ public class requestController {
 		
 		double cost = Double.parseDouble(ctx.formParam("cost"));
 		
-		
 		String justification = ctx.formParam("justification");
 		
 		request newRequest = new request(employeeId, requestDate, eventDate, description, cost, justification );
@@ -35,6 +40,8 @@ public class requestController {
 		request.createRequest(newRequest);
 		
 		ctx.redirect("checkStatus.html");
+		
+		log.info("New request has been submitted");
 
 		
 	}
@@ -45,11 +52,10 @@ public class requestController {
 		int employeeId= Integer.parseInt(ctx.queryParam("employeeId"));
 		
 		List<request> requests = request.getEmplRequests(employeeId);
-		
 			
 		 ctx.json(requests);
 		
-		
+		 log.info("Employee requests have been recieved");
 	}
 	
 	

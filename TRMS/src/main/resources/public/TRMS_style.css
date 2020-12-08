@@ -1,54 +1,57 @@
-@charset "utf-8";
+
 /* CSS Document */
-.table-style {
-    border-style: solid;
-/*
-    border-collapse: collapse;
-    border-width: 5px;
-    margin: 5px;
-*/
-	
-	margin-left: 30px; margin-right: auto; width: 60%; margin-bottom: 1em; border-collapse: collapse;
-}
-td, th {padding: 0.5em; }
-tr:nth-of-type(even) { background-color: #C0C5D2;}
-/*caption {margin:5em; font-weight: bold; font-size: 120%}*/
 
 
-#logout {float:right; padding-right: 30px; }
 div a {text-decoration: none;}
 
 h1 {padding:2em; color: #FFFFFF; background-color: #144cd7;  padding-top: 50px; padding-left: 2em;}
 
-
 nav {float:left; width: 200px; font-weight: bold; text-align: center; padding: 1em; margin-right: 50px;}
-
 nav ul {list-style-type: none; padding-left: 0; font-size:1em;}
-
 nav a { text-decoration: none; text-align: center; font-weight:bold; border: 3px outset #CCCCCC; padding:1em; margin-bottom:1em; display:block;}
 
 nav a:link{color:#04184B;}
 nav a:visited{color:#497777;}
 nav a:hover{color:#f45d0a; border: 3px inset #333333; background-color: #b6d2d3; transition: background-color 2s ease-out;}
 
+body {background-color: #04184B; color: #04184B; min-height: 900px;}
+body {font-family: Arial;}
+
+header{ display: block; }
+
+main{ display: block; } nav{ display: block; } footer{ display: block; } 
+     figure{ display: block; } figcaption{ display: block; } 
+     aside{ display: block; } section{display: block; } 
+     article { display: block; }
+
+footer{ font-size: small; font-style: italic; text-align: center; background-color: #9BC1C2; padding: 1em; margin-top: 400px;}
+
+label {float:left; display:block; text-align: right; width: 10em; padding-right:1em;}
+
+input {display: block; margin-bottom: 2em; }
+
+textarea {display: block; margin-bottom: 2em;}
+
+input[type="submit"] {margin-left:2em;}
+
+form {padding:3em; margin-left: 300px;}
+
+
+#logout {float:right; padding-right: 30px; }
+
+#login {margin-left: 40px;}
+
 #wrapper {color:#3F2860; background-color: #F5F5F5; width: 80%;
           margin-left: auto; margin-right: auto;
           min-width:550px; max-width: 1280px; }
 
-body {background-color: #04184B; color: #04184B; min-height: 900px;}
-body {font-family: Arial;}
-header{ display: block; }
-main{ display: block; } nav{ display: block; } footer{ display: block; } figure{ display: block; } figcaption{ display: block; } aside{ display: block; } section{ display: block; } article { display: block; }
-
-
-footer{ font-size: small; font-style: italic; text-align: center; background-color: #9BC1C2; padding: 1em; margin-top: 400px;}
-#login {margin-left: 40px;}
-
-label {float:left; display:block; text-align: right; width: 10em; padding-right:1em;}
-input {display: block; margin-bottom: 2em; }
-textarea {display: block; margin-bottom: 2em;}
-input[type="submit"] {margin-left:2em;}
-form {padding:3em; margin-left: 300px;}
 .adjustButton {margin-left:175px;}
 
 .clear {clear:both; padding-left:2em;}
+
+.table-style {
+    border-style: solid;	
+	margin-left: 30px; margin-right: auto; width: 60%; margin-bottom: 1em; border-collapse: collapse;
+	}
+	td, th {padding: 0.5em; }
+	tr:nth-of-type(even) { background-color: #C0C5D2;}

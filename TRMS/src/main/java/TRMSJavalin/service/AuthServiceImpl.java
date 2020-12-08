@@ -8,11 +8,13 @@ import java.util.List;
 import java.util.Map;
 import TRMSJavalin.dao.loginDao;
 import TRMSJavalin.dao.loginDaoPostgres;
-//import examples.pubhub.model.Tag;
 
+import java.util.logging.Logger;
 
 
 public class AuthServiceImpl implements AuthService{
+	
+	private static Logger log = Logger.getAnonymousLogger();
 
 	
 	//private static byte[] salt = new SecureRandom().getSeed(16);
@@ -28,6 +30,9 @@ public class AuthServiceImpl implements AuthService{
 		    String dbPassword = list.get(0).toString();
 		    
 		if (dbPassword.equals(password)) {
+			
+			log.info("successful login has occured");
+			
 			return true;
 		}
 		

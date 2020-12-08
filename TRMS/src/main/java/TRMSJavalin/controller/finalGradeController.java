@@ -6,10 +6,13 @@ import TMRS.pojos.finalGrade;
 import TRMSJavalin.service.finalGradeFullstack;
 import TRMSJavalin.service.finalGradeService;
 import io.javalin.http.Context;
+import java.util.logging.Logger;
 
 public class finalGradeController {
 
 	finalGradeService grade = new finalGradeFullstack();
+	
+	private static Logger log = Logger.getAnonymousLogger();
 	
 	public void makeFinalGrade(Context ctx) {
 		
@@ -25,19 +28,19 @@ public class finalGradeController {
 		
 		grade.makeFinalGrade(newGrade);
 		
-		System.out.println("it worked!");
-		
 		ctx.redirect("finalGrade.html");
+		
+		log.info("FInal grade has been submitted");
 		
 	}
 	
 	public void getGrades(Context ctx) {
 		
 		List <finalGrade> grades = grade.getFinalGrade();
-		
-		
-		System.out.print("hey!");
+
 		ctx.json(grades);
+		
+		log.info("Final grade has been retrieved");
 		
 		
 	}

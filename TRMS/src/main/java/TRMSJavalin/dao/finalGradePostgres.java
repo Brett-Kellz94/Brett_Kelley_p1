@@ -20,6 +20,7 @@ public class finalGradePostgres implements finalGradeDao {
 
 	@Override
 	public void makeFinalGrade(finalGrade grade) {
+		
 		String sql = "insert into final_grade (requestid, grading_format, final_grade, pass_threshold)"
 				+ "values(?, ?, ?, ?)";
 		
@@ -42,6 +43,7 @@ public class finalGradePostgres implements finalGradeDao {
 
 	@Override
 	public List<finalGrade> getFinalGrade() {
+		
 		List<finalGrade> Grades = new ArrayList<>();
 		
 		try (Connection conn = connUtil.createConnection()) {
