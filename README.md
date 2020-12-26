@@ -8,10 +8,10 @@ The purpose of TRMS is to provide a system that encourages quality knowledge gro
   
 # Technologies Used
 
-Java 8
-HTML5, CSS 3, Javascript ES6
+Java 8,
+HTML5, CSS 3, Javascript ES6,
 Web API - Javalin Server
-Azure Cloud hosting
+Azure Cloud hosting,
 Linux VM
 
 # Features
