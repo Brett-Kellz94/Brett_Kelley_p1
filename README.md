@@ -22,9 +22,17 @@ A supervisor can approve or deny a reimburement request which will be updated to
 Once an employee has approval from the appropriate parties, they can sumbit a grade.
 The grade can then be approved or denied. If approved, the award they requested will be automatically calculated and available in their account. 
 
-To-do list:
+## To-do list:
 
 Allow an employee to attach a supporting document which can be viewed by their superior.
 Allow employers to send a message with their denial of a request. 
 Include form and login verification.
 Display employee's tuition reimburesemnt balance on the home page for ease-of-use. 
+
+## Set-up:
+
+Clone repo
+Pull all dependencies with gradle
+Connect backend to database by configuring environment variables
+Start javalin server using preferred IDE
+Open browser to defined local host port and begin login. 
